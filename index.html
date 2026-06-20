@@ -4,12 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>文案工具箱 - 免费在线工具集</title>
-<meta name="description" content="免费在线工具集：二维码生成、JSON格式化、Base64编解码、时间戳转换、颜色转换、URL编解码、正则测试、密码生成、字数统计、Markdown编辑器。无需注册，即开即用。">
-<meta name="keywords" content="二维码生成,JSON格式化,Base64编码,时间戳转换,颜色转换,URL编码,正则表达式,密码生成,字数统计,在线工具">
+<meta name="description" content="免费在线工具集：二维码生成、JSON格式化、Base64编解码、时间戳转换、颜色转换、URL编解码、正则测试、密码生成、字数统计、Markdown编辑器、视频转音频、图片转PDF、合并拆分PDF、PDF提取文字、Word转Markdown。无需注册，即开即用。">
+<meta name="keywords" content="二维码生成,JSON格式化,Base64编码,时间戳转换,颜色转换,URL编码,正则表达式,密码生成,字数统计,在线工具,视频转音频,图片转PDF,合并PDF,拆分PDF,PDF提取文字,Word转Markdown">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✏️</text></svg>">
 <link rel="manifest" href="manifest.json">
 <script src="https://cdn.jsdelivr.net/npm/qrcode@1/build/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2/dist/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1/dist/pdf-lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3/build/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1/mammoth.browser.min.js"></script>
 </head>
 <body>
 <header class="header"><div class="container"><h1 class="logo">✏️ 文案工具箱</h1><p class="subtitle">免费在线工具集 · 即开即用 · 无需注册</p></div></header>
@@ -24,6 +28,11 @@
 <a href="#regex" class="tool-card" onclick="showTool('regex')"><div class="tool-icon">🔍</div><h3>正则测试</h3><p>可视化正则匹配，支持多捕获组</p></a>
 <a href="#password" class="tool-card" onclick="showTool('password')"><div class="tool-icon">🔑</div><h3>密码生成</h3><p>随机强密码生成，可自定义规则</p></a>
 <a href="#word-count" class="tool-card" onclick="showTool('word-count')"><div class="tool-icon">📊</div><h3>字数统计</h3><p>中英文字数、字符数、段落数实时统计</p></a>
+<a href="#video-to-audio" class="tool-card" onclick="showTool('video-to-audio')"><div class="tool-icon">🎵</div><h3>视频转音频</h3><p>上传视频，提取音轨下载为WAV</p></a>
+<a href="#img-to-pdf" class="tool-card" onclick="showTool('img-to-pdf')"><div class="tool-icon">📄</div><h3>图片转PDF</h3><p>多张图片合并导出为PDF</p></a>
+<a href="#pdf-merge-split" class="tool-card" onclick="showTool('pdf-merge-split')"><div class="tool-icon">🗂</div><h3>合并/拆分PDF</h3><p>合并多个PDF，或拆分为单页</p></a>
+<a href="#pdf-text" class="tool-card" onclick="showTool('pdf-text')"><div class="tool-icon">📝</div><h3>PDF提取文字</h3><p>上传PDF提取纯文本内容</p></a>
+<a href="#word-to-md" class="tool-card" onclick="showTool('word-to-md')"><div class="tool-icon">📝</div><h3>Word→Markdown</h3><p>docx转Markdown格式</p></a>
 <a href="#markdown" class="tool-card" onclick="showTool('markdown')"><div class="tool-icon">📝</div><h3>Markdown编辑器</h3><p>在线编辑与实时预览</p></a>
 </section>
 <section class="tool-panel" id="toolPanel" style="display:none">
@@ -43,4 +52,9 @@
 <script src="js/tools/password.js"></script>
 <script src="js/tools/word-count.js"></script>
 <script src="js/tools/markdown.js"></script>
+<script src="js/tools/video-to-audio.js"></script>
+<script src="js/tools/img-to-pdf.js"></script>
+<script src="js/tools/pdf-tools.js"></script>
+<script src="js/tools/pdf-text.js"></script>
+<script src="js/tools/word-to-md.js"></script>
 </body></html>

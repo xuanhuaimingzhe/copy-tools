@@ -1,0 +1,9 @@
+{
+    "name": "文案工具箱",
+    "short_name": "文案工具",
+    "description": "免费在线文案处理工具集：字数统计、敏感词检测、简繁转换等",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f8fafc",
+    "theme_color": "#2563eb"
+}

@@ -3,22 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>文案工具箱 - 免费在线文字处理工具集</title>
-<meta name="description" content="免费在线文案处理工具：字数统计、敏感词检测、简繁转换、JSON格式化、Base64编解码、Markdown编辑器。无需注册，即开即用。">
-<meta name="keywords" content="字数统计,敏感词检测,简繁转换,JSON格式化,Base64编码,在线工具,文案工具">
+<title>文案工具箱 - 免费在线工具集</title>
+<meta name="description" content="免费在线工具集：二维码生成、JSON格式化、Base64编解码、时间戳转换、颜色转换、URL编解码、正则测试、密码生成、字数统计、Markdown编辑器。无需注册，即开即用。">
+<meta name="keywords" content="二维码生成,JSON格式化,Base64编码,时间戳转换,颜色转换,URL编码,正则表达式,密码生成,字数统计,在线工具">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✏️</text></svg>">
 <link rel="manifest" href="manifest.json">
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1/build/qrcode.min.js"></script>
 </head>
 <body>
-<header class="header"><div class="container"><h1 class="logo">✏️ 文案工具箱</h1><p class="subtitle">免费在线文字处理工具 · 即开即用 · 无需注册</p></div></header>
+<header class="header"><div class="container"><h1 class="logo">✏️ 文案工具箱</h1><p class="subtitle">免费在线工具集 · 即开即用 · 无需注册</p></div></header>
 <main class="container">
 <section class="tool-grid" id="toolGrid">
+<a href="#qrcode" class="tool-card" onclick="showTool('qrcode')"><div class="tool-icon">📱</div><h3>二维码生成</h3><p>输入文字或网址，一键生成可下载的二维码</p></a>
+<a href="#json-formatter" class="tool-card" onclick="showTool('json-formatter')"><div class="tool-icon">{ }</div><h3>JSON格式化</h3><p>JSON格式化、压缩、校验</p></a>
+<a href="#base64" class="tool-card" onclick="showTool('base64')"><div class="tool-icon">🔐</div><h3>Base64编解码</h3><p>文字与Base64编码互转，支持中文</p></a>
+<a href="#timestamp" class="tool-card" onclick="showTool('timestamp')"><div class="tool-icon">⏰</div><h3>时间戳转换</h3><p>Unix时间戳与日期互转</p></a>
+<a href="#color" class="tool-card" onclick="showTool('color')"><div class="tool-icon">🎨</div><h3>颜色转换</h3><p>HEX / RGB / HSL 颜色格式互转</p></a>
+<a href="#urlcode" class="tool-card" onclick="showTool('urlcode')"><div class="tool-icon">🔗</div><h3>URL编解码</h3><p>URL编码与解码</p></a>
+<a href="#regex" class="tool-card" onclick="showTool('regex')"><div class="tool-icon">🔍</div><h3>正则测试</h3><p>可视化正则匹配，支持多捕获组</p></a>
+<a href="#password" class="tool-card" onclick="showTool('password')"><div class="tool-icon">🔑</div><h3>密码生成</h3><p>随机强密码生成，可自定义规则</p></a>
 <a href="#word-count" class="tool-card" onclick="showTool('word-count')"><div class="tool-icon">📊</div><h3>字数统计</h3><p>中英文字数、字符数、段落数实时统计</p></a>
-<a href="#sensitive-word" class="tool-card" onclick="showTool('sensitive-word')"><div class="tool-icon">🚫</div><h3>敏感词检测</h3><p>检测敏感词汇和不当内容</p></a>
-<a href="#zh-convert" class="tool-card" onclick="showTool('zh-convert')"><div class="tool-icon">🔄</div><h3>简繁转换</h3><p>中文简体繁体一键互转</p></a>
-<a href="#json-formatter" class="tool-card" onclick="showTool('json-formatter')"><div class="tool-icon">{ }</div><h3>JSON格式化</h3><p>格式化、压缩、校验</p></a>
-<a href="#base64" class="tool-card" onclick="showTool('base64')"><div class="tool-icon">🔐</div><h3>Base64编解码</h3><p>编解码，支持中文</p></a>
 <a href="#markdown" class="tool-card" onclick="showTool('markdown')"><div class="tool-icon">📝</div><h3>Markdown编辑器</h3><p>在线编辑与实时预览</p></a>
 </section>
 <section class="tool-panel" id="toolPanel" style="display:none">
@@ -28,10 +33,14 @@
 </main>
 <footer class="footer"><div class="container"><p>© 2026 文案工具箱 · 免费在线工具</p></div></footer>
 <script src="js/app.js"></script>
-<script src="js/tools/word-count.js"></script>
-<script src="js/tools/sensitive-word.js"></script>
-<script src="js/tools/zh-convert.js"></script>
+<script src="js/tools/qrcode.js"></script>
 <script src="js/tools/json-formatter.js"></script>
 <script src="js/tools/base64.js"></script>
+<script src="js/tools/timestamp.js"></script>
+<script src="js/tools/color.js"></script>
+<script src="js/tools/urlcode.js"></script>
+<script src="js/tools/regex.js"></script>
+<script src="js/tools/password.js"></script>
+<script src="js/tools/word-count.js"></script>
 <script src="js/tools/markdown.js"></script>
 </body></html>
